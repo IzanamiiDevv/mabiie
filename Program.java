@@ -9,6 +9,7 @@ public class Program {
         int test = 20;
 
         System.out.println(test);
+        System.out.println("I love you");
         
     }
 }
