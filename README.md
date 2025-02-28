@@ -169,5 +169,10 @@ public class Main {
 - Can be accessed without an instance of the outer class.
 - Cannot access non-static members of the outer class.
 
+---
 
 
+### When to Use Inner Classes?
+- Use Non-static Inner Classes when the inner class needs access to instance members of the outer class.
+- Use Private Inner Classes when you want to restrict access to the inner class.
+- Use Static Inner Classes when the inner class does not depend on an instance of the outer class.
