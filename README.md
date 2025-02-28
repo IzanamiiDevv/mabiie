@@ -8,6 +8,7 @@ In Java, it is also possible to nest classes (a class within a class).An inner c
 
 The purpose of nested classes is to group classes that belong together, which makes your code more readable and maintainable.
 
+### Example:
 
 ```java
 class OuterClass {
@@ -32,6 +33,7 @@ Output: 15 (5 + 10)
 
 A default (non-static) inner class is a class declared inside another class without the static keyword.
 
+### Example:
 ```java
 class Outer {
     class Inner {  // Default (Non-static) Inner Class
