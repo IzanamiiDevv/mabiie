@@ -136,4 +136,38 @@ public class Main {
 - Cannot be accessed from outside the outer class.
 - The outer class needs to provide a public method to interact with the private inner class.
 
+---
+
+## Static Inner Class (Nested Static Class)
+
+An inner class can also be static, which means that you can access it without creating an object of the outer class.
+
+### Purpose & Value
+- Used when the inner class does not need access to instance members of the outer class.
+- Can be instantiated without creating an instance of the outer class.
+- Useful in utility/helper classes.
+
+### Example:
+```java
+class Outer {
+    static class Inner {  // Static Inner Class
+        void show() {
+            System.out.println("Inside Static Inner Class");
+        }
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Outer.Inner inner = new Outer.Inner();  // No need for Outer instance
+        inner.show();
+    }
+}
+```
+
+### Key Points
+- Can be accessed without an instance of the outer class.
+- Cannot access non-static members of the outer class.
+
+
 
