@@ -70,3 +70,70 @@ public class Main {
 ---
 
 ## Private Inner Class
+
+A private inner class is a non-static inner class marked as private.
+
+Unlike a "regular" class, an inner class can be private or protected. If you don't want outside objects to access the inner class, declare the class as private.
+
+Purpose & Value
+Used when the inner class is meant to be hidden from external access.
+Ensures tight encapsulation.
+
+### Example:
+```java
+class OuterClass {
+  int x = 10;
+
+  private class InnerClass {
+    int y = 5;
+  }
+}
+
+public class Main {
+  public static void main(String[] args) {
+    OuterClass myOuter = new OuterClass();
+    OuterClass.InnerClass myInner = myOuter.new InnerClass();
+    System.out.println(myInner.y + myOuter.x);
+  }
+}
+```
+
+If you try to access a private inner class from an outside class, an error occurs:
+
+```error
+Main.java:13: error: OuterClass.InnerClass has private access in OuterClass
+    OuterClass.InnerClass myInner = myOuter.new InnerClass();
+              ^
+```
+
+### Example:
+```java
+class Outer {
+    private class Inner {  // Private Inner Class
+        void show() {
+            System.out.println("Inside Private Inner Class");
+        }
+    }
+
+    void accessInner() {
+        Inner inner = new Inner();
+        inner.show();
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Outer outer = new Outer();
+        outer.accessInner();  // Works fine
+
+        // Outer.Inner inner = outer.new Inner(); // Error: Inner is private
+    }
+}
+
+```
+
+### Key Points
+- Cannot be accessed from outside the outer class.
+- The outer class needs to provide a public method to interact with the private inner class.
+
+
