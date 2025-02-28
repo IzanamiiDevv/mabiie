@@ -30,6 +30,33 @@ public class Main {
 Output: 15 (5 + 10)
 ```
 
+A default (non-static) inner class is a class declared inside another class without the static keyword.
+
+```java
+class Outer {
+    class Inner {  // Default (Non-static) Inner Class
+        void display() {
+            System.out.println("Inside Inner Class");
+        }
+    }
+
+    void createInner() {
+        Inner inner = new Inner();  // Creating an inner class instance
+        inner.display();
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Outer outer = new Outer();
+        outer.createInner();
+
+        // Alternatively, we can create an Inner class instance from outside:
+        Outer.Inner innerObj = outer.new Inner();
+        innerObj.display();
+    }
+}
+```
 ---
 
 ## Private Inner Class
