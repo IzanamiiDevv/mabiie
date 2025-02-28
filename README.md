@@ -33,6 +33,10 @@ Output: 15 (5 + 10)
 
 A default (non-static) inner class is a class declared inside another class without the static keyword.
 
+### Purpose & Value
+- Used when the inner class needs access to the outer class’s instance members.
+- Commonly used in scenarios where a class is only relevant within another class.
+
 ### Example:
 ```java
 class Outer {
