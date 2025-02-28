@@ -1,3 +1,5 @@
+---
+
 # JAVA Inner Classes
 
 In Java, it is also possible to nest classes (a class within a class).An inner class is a class defined within another class. 
@@ -27,3 +29,5 @@ Output: 15 (5 + 10)
 ```
 
 ---
+
+# Private Inner Class
