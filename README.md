@@ -59,6 +59,10 @@ public class Main {
     }
 }
 ```
+### Key Points
+- Requires an instance of the outer class to be created.
+- Can access private members of the outer class.
+
 ---
 
 ## Private Inner Class
