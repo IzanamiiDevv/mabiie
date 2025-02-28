@@ -22,4 +22,7 @@ public class Main {
   }
 }
 ```
+```code
+Output: 15 (5 + 10)
+```
 
